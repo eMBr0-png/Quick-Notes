@@ -38,3 +38,11 @@ class NotesApp:
                                      bg="#2196f3", fg="white", width=20)
         self.clear_button.pack(pady=5)
 
+    def add_note(self):
+        """Реалізація Картки №1: Додавання нотатки"""
+        text = self.entry.get().strip()  # Отримуємо текст і прибираємо зайві пробіли
+        if text:
+            self.listbox.insert(tk.END, text)  # Додаємо в кінець списку
+            self.entry.delete(0, tk.END)       # Очищаємо поле введення
+        else:
+            messagebox.showwarning("Помилка", "Не можна додати порожню нотатку!")
