@@ -46,3 +46,11 @@ class NotesApp:
             self.entry.delete(0, tk.END)       # Очищаємо поле введення
         else:
             messagebox.showwarning("Помилка", "Не можна додати порожню нотатку!")
+
+    def delete_note(self):
+        """Реалізація Картки №2: Видалення обраного елемента"""
+        try:
+            selected_index = self.listbox.curselection()[0] # Отримуємо індекс обраного
+            self.listbox.delete(selected_index)             # Видаляємо
+        except IndexError:
+            messagebox.showinfo("Підказка", "Будь ласка, спочатку оберіть нотатку зі списку")
