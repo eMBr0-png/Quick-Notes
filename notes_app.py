@@ -54,3 +54,9 @@ class NotesApp:
             self.listbox.delete(selected_index)             # Видаляємо
         except IndexError:
             messagebox.showinfo("Підказка", "Будь ласка, спочатку оберіть нотатку зі списку")
+    
+    def clear_all(self):
+        """Реалізація Картки №3: Повне очищення списку"""
+        confirm = messagebox.askyesno("Підтвердження", "Ви впевнені, що хочете видалити ВСІ нотатки?")
+        if confirm:
+            self.listbox.delete(0, tk.END)
