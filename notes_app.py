@@ -60,3 +60,8 @@ class NotesApp:
         confirm = messagebox.askyesno("Підтвердження", "Ви впевнені, що хочете видалити ВСІ нотатки?")
         if confirm:
             self.listbox.delete(0, tk.END)
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = NotesApp(root)
+    root.mainloop()
