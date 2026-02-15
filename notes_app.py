@@ -18,7 +18,7 @@ class NotesApp:
 
         # Кнопка додавання
         self.add_button = tk.Button(root, text="➕ Додати нотатку", command=self.add_note, 
-                                   bg="#4caf50", fg="white", font=("Arial", 10, "bold"), width=20)
+                                   bg="#0f073f", fg="white", font=("Arial", 10, "bold"), width=20)
         self.add_button.pack(pady=10)
 
         # Список нотаток
@@ -27,7 +27,7 @@ class NotesApp:
 
         # Кнопка видалення (Завдання 2)
         self.delete_button = tk.Button(root, text="🗑 Видалити обране", command=self.delete_note, 
-                                      bg="#f44336", fg="white", width=20)
+                                      bg="#3bbec7", fg="white", width=20)
         self.delete_button.pack(pady=5)
 
         # Кнопка очищення (Завдання 3)
